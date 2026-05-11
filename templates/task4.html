@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Task 4 - Core Web Vitals Activity</title>
+
   <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
 
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
+  <script defer src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="{{ url_for('static', filename='task4.js') }}"></script>
 </head>
+
 <body>
   <header class="topbar">
     <div class="container">
@@ -35,8 +38,9 @@
       <img
         id="hero-image"
         class="hero-image"
-        src=""
-        loading="lazy"
+        src="https://picsum.photos/id/180/1200/700"
+        width="1200"
+        height="700"
         alt="Large workspace hero image"
       />
     </section>
@@ -52,7 +56,7 @@
     <section class="product-grid" id="product-grid">
       <article class="card">
         <div class="image-slot">
-          <img src="https://picsum.photos/id/1040/900/700" alt="Desk setup" loading="lazy" />
+          <img src="https://picsum.photos/id/1040/900/700" width="900" height="700" alt="Desk setup" loading="lazy" />
         </div>
         <h4>Minimal Desk</h4>
         <p>Clean wooden desk for a focused setup.</p>
@@ -60,7 +64,7 @@
 
       <article class="card">
         <div class="image-slot">
-          <img src="https://picsum.photos/id/1060/900/700" alt="Modern chair" loading="lazy" />
+          <img src="https://picsum.photos/id/1060/900/700" width="900" height="700" alt="Modern chair" loading="lazy" />
         </div>
         <h4>Modern Chair</h4>
         <p>Ergonomic comfort for long working sessions.</p>
@@ -68,14 +72,15 @@
 
       <article class="card">
         <div class="image-slot" id="late-image-slot">
+          <img src="https://picsum.photos/id/1080/900/700" width="900" height="700" alt="Ambient lamp" loading="lazy" />
         </div>
         <h4>Ambient Lamp</h4>
-        <p>This card gets an image late, causing a visible shift.</p>
+        <p>This card image now has reserved space, avoiding a visible shift.</p>
       </article>
 
       <article class="card">
         <div class="image-slot">
-          <img src="https://picsum.photos/id/103/900/700" alt="Bookshelf" loading="lazy" />
+          <img src="https://picsum.photos/id/103/900/700" width="900" height="700" alt="Bookshelf" loading="lazy" />
         </div>
         <h4>Bookshelf</h4>
         <p>Storage that fits a home office space.</p>
@@ -89,8 +94,5 @@
       </p>
     </section>
   </main>
-
-  
-  <script src="{{ url_for('static', filename='task4.js') }}"></script>
 </body>
 </html>

@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Task 3 Activity</title>
+    <title>Task 3 Activity</title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        #image-container {
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 15 / 8;
+            margin: 1rem 0;
+        }
+    </style>
 </head>
-    <body>
+<body>
 
-        <h1>Which metric/s has a bad performance on this page?</h1>
+<h1>Which metric/s has a bad performance on this page?</h1>
 
-        <p>This is a text box with text in it, showing some text in English.</p>
+<p>This is a text box with text in it, showing some text in English.</p>
 
-        <div id="image-container"></div>
+<div id="image-container">
+    <img src="https://picsum.photos/1500/800" width="1500" height="800" alt="Random image">
+</div>
 
-        <script>
+<p>More content below (in English, similar to the English text box with text above).</p>
 
-        setTimeout(() => {
+<img src="https://picsum.photos/1600/900" width="1600" height="900" alt="Random image">
 
-            const img = document.createElement("img");
-            img.src = "https://picsum.photos/1500/800";
-
-            document.getElementById("image-container")
-                .appendChild(img);
-
-        }, 1000);
-
-        </script>
-
-        <p>More content below (in English, similar to the English text box with text above).</p>
-        <img src="https://picsum.photos/1600/900" width="100%">
-    </body>
+</body>
 </html>
